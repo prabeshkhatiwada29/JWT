@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from account.seralizers import UserRegistrationSerializer, UserLoginSerializer
 from django.contrib.auth import authenticate
 
+# user registration view
 class UserRegistrationView(APIView):
     def post(self, request, format=None):
         serializer = UserRegistrationSerializer(data=request.data)
@@ -13,6 +14,7 @@ class UserRegistrationView(APIView):
             return Response({"msg": "User registration successful!"}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+# user login view
 class UserLoginView(APIView):
     def post(self,request, format=None):
         seralizer = UserLoginSerializer(data=request.data)
