@@ -37,15 +37,22 @@ Prerequisites
     Virtual environment (recommended)
 Installation
 
-1:Clone the repository:
+1:Clone the repository
     git clone https://github.com/yourusername/django-jwt-auth.git
+    
     cd django-jwt-auth
-2:Set up a virtual environment:
+    
+2:Set up a virtual environment
     python -m venv env
+    
     source env/bin/activate  # On Windows use `env\Scripts\activate`
-3:Install dependencies:
+    
+3:Install dependencies
+
     pip install -r requirements.txt
+    
 4:Apply migrations:
+
      python manage.py migrate
      
 
